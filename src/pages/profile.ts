@@ -47,10 +47,17 @@ export function handleProfile(user: User, users: User[]) {
                     break;
 
                 case 2:
+                    console.clear()
                     users.map(user => {
                         if (user instanceof UserMember) {
                             user.recipes.forEach(recipe => {
-                                console.table(recipe)
+                                console.log('------Receita------\n')
+                                console.log(`Nome do criador da receita: ${recipe.creator}`)
+                                console.log(`Nome da receita: ${recipe.recipeName}`)
+                                console.log(`Tipo: ${recipe.type}`)
+                                console.log(`Ingredientes: ${recipe.ingredients}`)
+                                console.log(`Modo de preparo: ${recipe.preparationMode}\n`)
+
                             })
                         }
                     })
@@ -83,7 +90,13 @@ export function handleProfile(user: User, users: User[]) {
                     users.map(user => {
                         if (user instanceof UserMember) {
                             user.recipes.forEach(recipe => {
-                                console.table(recipe)
+                                console.log('------Receita------\n')
+                                console.log(`Nome do criador da receita: ${recipe.creator}`)
+                                console.log(`Nome da receita: ${recipe.recipeName}`)
+                                console.log(`Tipo: ${recipe.type}`)
+                                console.log(`Ingredientes: ${recipe.ingredients}`)
+                                console.log(`Modo de preparo: ${recipe.preparationMode}\n`)
+
                             })
                         }
                     })

@@ -34,10 +34,16 @@ function handleProfile(user, users) {
                     console.log('Receita foi criada com sucesso!\n');
                     break;
                 case 2:
+                    console.clear();
                     users.map(user => {
                         if (user instanceof UserMember_1.UserMember) {
                             user.recipes.forEach(recipe => {
-                                console.table(recipe);
+                                console.log('------Receita------\n');
+                                console.log(`Nome do criador da receita: ${recipe.creator}`);
+                                console.log(`Nome da receita: ${recipe.recipeName}`);
+                                console.log(`Tipo: ${recipe.type}`);
+                                console.log(`Ingredientes: ${recipe.ingredients}`);
+                                console.log(`Modo de preparo: ${recipe.preparationMode}\n`);
                             });
                         }
                     });
@@ -63,7 +69,12 @@ function handleProfile(user, users) {
                     users.map(user => {
                         if (user instanceof UserMember_1.UserMember) {
                             user.recipes.forEach(recipe => {
-                                console.table(recipe);
+                                console.log('------Receita------\n');
+                                console.log(`Nome do criador da receita: ${recipe.creator}`);
+                                console.log(`Nome da receita: ${recipe.recipeName}`);
+                                console.log(`Tipo: ${recipe.type}`);
+                                console.log(`Ingredientes: ${recipe.ingredients}`);
+                                console.log(`Modo de preparo: ${recipe.preparationMode}\n`);
                             });
                         }
                     });
